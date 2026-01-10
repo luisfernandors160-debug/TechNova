@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Nova | Soluciones Digitales</title>
+
+<style>
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #0b0f1a;
+  color: #eaeaea;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header con parallax y gradiente */
+header {
+  padding: 120px 20px 80px;
+  text-align: center;
+  background: linear-gradient(135deg,#0a1aff,#00c6ff);
+  color: #fff;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+header p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* Botón WhatsApp */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 16px 36px;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #1ebe57;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Botón flotante WhatsApp */
+#whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+/* Secciones */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: #00c6ff;
+}
+
+/* Servicios */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #151a2e;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.card svg {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  fill: #00c6ff;
+}
+
+.card strong {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #00c6ff;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #cfcfcf;
+}
+
+/* Confianza / frases */
+.trust {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #0a1330;
+  padding: 30px 20px;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #080b14;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+/* Animaciones al hacer scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header h1 { font-size: 2.2rem; }
+  header p { font-size: 1.1rem; }
+  .card { padding: 20px 15px; }
+  section { padding: 50px 15px; }
+  .trust { font-size: 1rem; padding: 25px 15px; }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>Tech Nova</h1>
+  <p>Diseño Web · Automatización · Tecnología</p>
+  <a class="btn" href="https://wa.me/522211119625" target="_blank">WhatsApp</a>
+</header>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/522211119625" id="whatsapp-float" target="_blank">💬</a>
+
+<section>
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="card fade-in">
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/></svg>
+      <strong>Diseño Web Profesional</strong>
+      <p>Páginas modernas, rápidas y optimizadas para todos los dispositivos.</p>
+    </div>
+    <div class="card fade-in">
+      <svg viewBox="0 0 64 64"><rect x="12" y="12" width="40" height="40"/></svg>
+      <strong>Landing Pages</strong>
+      <p>Llega a tus clientes de manera rápida y efectiva con páginas de conversión.</p>
+    </div>
+    <div class="card fade-in">
+      <svg viewBox="0 0 64 64"><polygon points="32,4 60,60 4,60"/></svg>
+      <strong>Automatización Digital</strong>
+      <p>Optimiza tus procesos y aumenta tus ventas con herramientas inteligentes.</p>
+    </div>
+    <div class="card fade-in">
+      <svg viewBox="0 0 64 64"><path d="M32 4 L60 60 H4 Z"/></svg>
+      <strong>Optimización y SEO</strong>
+      <p>Mejora tu presencia en Google y atrae clientes que buscan tus servicios.</p>
+    </div>
+  </div>
+
+  <div class="trust fade-in">
+    Atención directa · Sin intermediarios · Resultados garantizados
+  </div>
+</section>
+
+<footer>
+  © 2026 Tech Nova — Todos los derechos reservados
+</footer>
+
+<script>
+// Animación fade-in al hacer scroll
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.2 };
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+
+faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+
+</body>
+</html>
+
